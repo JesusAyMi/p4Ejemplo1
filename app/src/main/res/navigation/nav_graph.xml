@@ -37,5 +37,22 @@
             android:name="nombre"
             app:argType="string"
             android:defaultValue="Jesús Ayala" />
+        <action
+            android:id="@+id/action_saludoFragment_to_cambiarNombreFragment"
+            app:destination="@id/cambiarNombreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cambiarNombreFragment"
+        android:name="net.iessochoa.jesusayala.p4ejemplo1.CambiarNombreFragment"
+        android:label="fragment_cambiar_nombre"
+        tools:layout="@layout/fragment_cambiar_nombre" >
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cambiarNombreFragment_to_saludoFragment"
+            app:destination="@id/saludoFragment"
+            app:popUpTo="@id/saludoFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
